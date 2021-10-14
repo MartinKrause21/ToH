@@ -1,0 +1,36 @@
+h2 {
+    background-color: #1976d2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+span {
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+  }
+
+label {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+input {
+    color: #1976d2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: 1px solid rgb(241, 235, 235);
+    background-color: #fafafa;
+}
+div {
+    color: rgb(243, 50, 50);
+    font-family: Arial, Helvetica, sans-serif;  
+}
