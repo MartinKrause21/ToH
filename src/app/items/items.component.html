@@ -1,0 +1,16 @@
+
+  <h2>{{item.name | uppercase}} Details:</h2>
+  <div><span>id: </span>{{item.id}}</div>
+  <div><span>name: </span>{{item.name}}</div>
+  <div><span>price: </span>{{item.price}}</div>
+  
+  <div>
+
+      <label for="name">Item name: </label>
+      <input id="name" [(ngModel)]="item.name" placeholder="name"><br>
+      
+      <label for="name">Item price: </label>
+      <input id="price" [(ngModel)]="item.price" placeholder="price">
+
+</div>
+  
