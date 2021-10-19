@@ -8,4 +8,17 @@
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
   
-  </div>
+    <div>
+      <ul>
+          <li *ngFor="let item of hero.items">
+              <app-item-detail [item]="item"></app-item-detail>
+          </li>
+      </ul>
+    </div>
+    
+    </div>
+  
+
+
+
+  
