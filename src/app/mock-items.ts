@@ -8,5 +8,5 @@ export const Items: Item[] = [
   { id: 14, name: 'Bat', price: 100 }, //3
   { id: 15, name: 'Knife', price: 80 }, //4
   { id: 16, name: 'Katana', price: 200 }, //5
-  { id: 17, name: 'Gun', price: 500 }, //6
+  { id: 17, name: 'Glock17', price: 500 }, //6
 ];

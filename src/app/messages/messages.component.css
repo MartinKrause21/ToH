@@ -24,6 +24,10 @@ button {
     padding: 0 40px;
 }
 
+button:hover {
+    background-color: rgb(151, 27, 33);
+}
+
 div { 
     padding: 2px;
     text-align: center;
