@@ -5,7 +5,7 @@
   <li *ngFor="let item of items"
   [class.selected]="item === selectedItem"
   (click)="onSelect(item)">
-  <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}} 
+  <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}}
 </li>
 </ul>
 

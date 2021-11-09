@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FItems } from '../mock-items';
 import { Item } from '../item';
-import { Items } from '../mock-items';
 
 @Component({
   selector: 'app-items',
@@ -9,7 +9,7 @@ import { Items } from '../mock-items';
 })
 export class ItemsComponent implements OnInit {
 
-  items = Items;
+  items = FItems;
 
   selectedItem?: Item;
   onSelect(item: Item): void {
