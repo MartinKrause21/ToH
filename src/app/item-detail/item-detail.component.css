@@ -44,18 +44,30 @@ li {
     padding: 4px;
     list-style-type: none;
 }
+
 button {
     background-color: #1976d2;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     border: none;
-    width: 50px;
+    width: auto;
+    min-width: 100%;
     text-align: center;
     border-radius: 4px;
-    padding: 0 40px;
+    padding: 2px;
+    margin: 2 2px;
 }
 
 button:hover {
     background-color: #12487e;
+}
+
+li {
+    
+    border-radius: 4px;
+    background-color:rgb(204, 226, 233) ;
+    margin: 2px;
+    padding: 4px;
+    list-style-type: none;
 }
