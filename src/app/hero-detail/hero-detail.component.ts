@@ -14,6 +14,17 @@ export class HeroDetailComponent implements OnInit {
   
   @Input() hero?: Hero;
 
+  divisions = [
+    {
+      content: '',
+      visibility: false
+    }
+  ];
+
+  toggleDiv(index: number) {
+    this.divisions[index].visibility = !this.divisions[index].visibility;
+  }
+
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
