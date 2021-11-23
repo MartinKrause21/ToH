@@ -28,7 +28,7 @@ export class HeroDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
-    private location: Location,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -44,5 +44,4 @@ export class HeroDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
 }

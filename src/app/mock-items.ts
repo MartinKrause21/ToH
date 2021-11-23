@@ -13,5 +13,5 @@ export const Items: Item[] = [
 
 export const FItems: Item[] = [
   { id: 18, name: 'Boxer', price: 200 }, //0
-  { id: 19, name: 'Revolver', price: 230 }, //1
+  { id: 19, name: 'Revolver', price: 550 }, //1
 ];

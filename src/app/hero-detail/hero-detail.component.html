@@ -11,8 +11,8 @@
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" />
     </div>
 
-    <div>
-      <span><label>Money: </label> </span>{{ hero.money }}
+    <button (click)="goBack()">go back</button>
+    
     </div>
 
     <ng-container *ngFor="let div of divisions; let i = index">
