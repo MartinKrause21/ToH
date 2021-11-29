@@ -1,0 +1,13 @@
+<h2>Items to buy</h2>
+
+<ul class="items">
+  <li *ngFor="let item of items" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+
+  <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}}
+  <button id="buybtn" > BUY </button>
+  
+</ul>
+
+<app-item-detail [item]="selectedItem"></app-item-detail>
+
+<button (click)="goBack()">Go Back</button>
