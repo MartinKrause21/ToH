@@ -7,8 +7,7 @@
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name"> <br>
 
-    <label for="hero-money">Hero money: </label>
-    <input id="hero-money" [(ngModel)]="hero.money" placeholder="money">
+    <div><span>Hero money: </span>{{hero.money}}  </div>
 
   </div>
 
@@ -22,7 +21,7 @@
 
   <button (click)="goBack()">Go Back</button>
 
-  <a routerLink="/freeitems"> <button class="free"> Free Items </button></a>
+  <a routerLink="/freeitems/{{hero.id}}"> <button class="free"> Free Items </button></a>
 
   </div>
 
