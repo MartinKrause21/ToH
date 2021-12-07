@@ -15,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FreeItemsComponent implements OnInit {
 
   fitems = FItems;
-  hero?: Hero;
+  hero!: Hero;
 
   selectedItem?: Item;
   onSelect(item: Item): void {
@@ -27,6 +27,7 @@ export class FreeItemsComponent implements OnInit {
     private heroService: HeroService,
     private route: ActivatedRoute,
   ) { }
+
   ngOnInit(): void {
     this.getHero();
    }
@@ -42,11 +43,19 @@ export class FreeItemsComponent implements OnInit {
   }
 
   buyItem(item: Item): void {
-    if (this.hero) {
+    if (this.hero.money >= item.price){
+      this.hero.money -=  item.price;
+      item.isFree = false;
       this.hero.items.push(item);
+      window.alert('Item has been bought');
     }
-  }
+    
+    if (this.hero.money <= item.price){
+      item.isFree = true;
+      window.alert('You dont have enough money');
+    }
 
+  }
 }
 
 
