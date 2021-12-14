@@ -9,10 +9,25 @@ import { Item } from '../item';
 export class ItemDetailComponent implements OnInit {
 
   @Input() item?: Item;
+  
+  @Input() hidden: boolean = false;
+  @Input() shown: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  isclick() {
+
+  }
+
+  isHidden() {
+    this.hidden = ! this.hidden;
+  }
+  
+  isShown() {
+    this.shown = ! this.shown;
   }
 
 }

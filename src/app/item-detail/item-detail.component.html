@@ -1,13 +1,33 @@
-<div *ngIf="item">
+<div *ngIf="item && item.isFree" id="withoutButton">
 
     <h2>{{item.name | uppercase}} Details</h2>
     <div><span>id: </span>{{item.id}}</div>
+
     <div>
       <label for="item-name">Item name: </label>
       <input id="item-name" [(ngModel)]="item.name" placeholder="name"> <br>
 
       <div><span>Item price: </span>{{item.price}}  </div>
-     
+      <button id="sell" *ngIf="hidden" (click)="isclick">  Sell  </button>
+      
     </div>
   
-  </div>
+</div>
+
+
+<div *ngIf="item && !item.isFree" id="withButton" >
+
+    <h2>{{item.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{item.id}}</div>
+
+    <div>
+      <label for="item-name">Item name: </label>
+      <input id="item-name" [(ngModel)]="item.name" placeholder="name"> <br>
+
+      <div><span>Item price: </span>{{item.price}}  </div>
+      <button id="sell" *ngIf="shown" (click)="isclick">  Sell  </button>
+      
+    </div>
+  
+</div>
+  

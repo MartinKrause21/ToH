@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class FreeItemsComponent implements OnInit {
 
-  fitems = FItems;
+  items = FItems;
   hero!: Hero;
 
   selectedItem?: Item;
@@ -26,6 +26,7 @@ export class FreeItemsComponent implements OnInit {
     private location: Location,
     private heroService: HeroService,
     private route: ActivatedRoute,
+    
   ) { }
 
   ngOnInit(): void {

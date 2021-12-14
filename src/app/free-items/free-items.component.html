@@ -2,7 +2,7 @@
 
   <ul class="items">  
 
-    <ng-container *ngFor="let item of fitems" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+    <ng-container *ngFor="let item of items" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <li *ngIf="item.isFree">
 
     
