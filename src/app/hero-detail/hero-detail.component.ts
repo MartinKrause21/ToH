@@ -42,7 +42,7 @@ export class HeroDetailComponent implements OnInit {
       item.isFree = true; 
       this.freeitems.push(item);
       this.deleteMsg(item);
-      window.alert ('you sold it')
+      window.alert ('You successfully sold item')
   }
 
   deleteMsg(item:Item) {

@@ -59,3 +59,19 @@ button {
 button:hover {
     background-color: #12487e;
 }
+ 
+#sell {
+    background-color: rgba(235, 88, 88, 0.925);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0 40px;
+}
+
+#sell:hover {
+    background-color: rgb(238, 54, 54);
+}
