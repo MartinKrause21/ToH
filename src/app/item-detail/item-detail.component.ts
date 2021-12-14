@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Hero } from '../hero';
 import { Item } from '../item';
 
 @Component({
@@ -10,24 +11,17 @@ export class ItemDetailComponent implements OnInit {
 
   @Input() item?: Item;
   
-  @Input() hidden: boolean = false;
-  @Input() shown: boolean = true;
+  @Output() deleteEvent = new EventEmitter <Item> ();
+  callParrentDelete() {
+    this.deleteEvent.emit();
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  isclick() {
-
-  }
-
-  isHidden() {
-    this.hidden = ! this.hidden;
-  }
-  
-  isShown() {
-    this.shown = ! this.shown;
+  sellitem() {
   }
 
 }

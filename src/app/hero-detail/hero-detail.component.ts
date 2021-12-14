@@ -37,4 +37,19 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+  sellitem(item: Item): void {
+      this.hero.money += item.price;
+      item.isFree = true; 
+      this.freeitems.push(item);
+      this.deleteMsg(item);
+      window.alert ('you sold it')
+  }
+
+  deleteMsg(item:Item) {
+    const index: number = this.hero.items.indexOf(item);
+    if (index !== -1) {
+        this.hero.items.splice(index, 1);
+    }
+  }
+
 }

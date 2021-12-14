@@ -15,7 +15,7 @@
     <ul>
 
         <li *ngFor="let item of hero.items">
-            <app-item-detail [item]="item"></app-item-detail>
+            <app-item-detail [item]="item" (deleteEvent)="sellitem(item)" > </app-item-detail>
             
         </li>
         
