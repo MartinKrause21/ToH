@@ -10,6 +10,9 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FreeItemsComponent } from './free-items/free-items.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,27 @@ import { FreeItemsComponent } from './free-items/free-items.component';
     ItemDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    FreeItemsComponent
+    FreeItemsComponent,
+ 
+    
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule, 
     BrowserModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule,
+    
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
