@@ -77,7 +77,7 @@ export class ItemService {
     );
   }
 
-  searchItemes(term: string): Observable<Item[]> {
+  searchItems(term: string): Observable<Item[]> {
     if (!term.trim()) {
       // if not search term, return empty Item array.
       return of([]);
