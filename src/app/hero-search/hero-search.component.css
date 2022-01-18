@@ -1,0 +1,13 @@
+#search-box {
+    background-color: #cee5fc;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0 60px;
+}
+

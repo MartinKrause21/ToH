@@ -4,6 +4,8 @@ import { HEROES } from '../mock-heroes';
 import  { Items } from '../mock-items';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -39,5 +41,25 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
   }
+
+  option: string = '';
+
+  dropDownChanged(event: any){
+    this.option = event.target.value;
+
+
+    if (this.option == "sort by id") {
+      return this.heroes.sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+    }
+    else if (this.option == "sort by name") {
+      return this.heroes.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else if (this.option == "sort by money") {
+      return this.heroes.sort((a, b) => a.money > b.money ? -1 : a.money < b.money ? 1 : 0);
+    }
+
+    return;
+  }
+
 
 }

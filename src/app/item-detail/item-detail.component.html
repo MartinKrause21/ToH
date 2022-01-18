@@ -11,6 +11,8 @@
       <div><span>Item price: </span>{{item.price}}  </div>
       <button id="sell" *ngIf="!item.isFree" (click)="callParrentDelete()">  Sell  </button>
       
+
+      <button (click)="save()">save</button>
     </div>
   
 </div>
