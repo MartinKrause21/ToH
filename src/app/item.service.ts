@@ -20,22 +20,22 @@ export class ItemService {
     private http: HttpClient, 
     private messageService: MessageService,) { }
 
-    getItemes(): Observable<Item[]> {
-      return this.http.get<Item[]>(this.itemsUrl)
-        .pipe(
-          tap(_ => this.log('fetched Itemes')),
-          catchError(this.handleError<Item[]>('getItemes', []))
-        );
-    }
+  getItems(): Observable<Item[]> {
+    return this.http.get<Item[]>(this.itemsUrl)
+      .pipe(
+      tap(_ => this.log('fetched Itemes')),
+      catchError(this.handleError<Item[]>('getItemes', []))
+    );
+  }
 
-    private log(message: string) {
-      this.messageService.add(`ItemService: ${message}`);
-    }
+  private log(message: string) {
+    this.messageService.add(`ItemService: ${message}`);
+  }
 
   getItem(id: number): Observable<Item> {
     const url = `${this.itemsUrl}/${id}`;
     return this.http.get<Item>(url).pipe(
-      tap(_ => this.log(`fetched Item id=${id}`)),
+      tap(_ => this.log(`fetched tem id=${id}`)),
       catchError(this.handleError<Item>(`getItem id=${id}`))
     );
   }
@@ -54,15 +54,15 @@ export class ItemService {
     };
   }
 
-  updateItem(Item: Item): Observable<any> {
-    return this.http.put(this.itemsUrl, Item, this.httpOptions).pipe(
-      tap(_ => this.log(`updated Item id=${Item.id}`)),
+  updateItem(item: Item): Observable<any> {
+    return this.http.put(this.itemsUrl, item, this.httpOptions).pipe(
+      tap(_ => this.log(`updated Item id=${item.id}`)),
       catchError(this.handleError<any>('updateItem'))
     );
   }
 
-  addItem(Item: Item): Observable<Item> {
-    return this.http.post<Item>(this.itemsUrl, Item, this.httpOptions).pipe(
+  addItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.itemsUrl, item, this.httpOptions).pipe(
       tap((newItem: Item) => this.log(`added Item w/ id=${newItem.id}`)),
       catchError(this.handleError<Item>('addItem'))
     );
@@ -72,7 +72,7 @@ export class ItemService {
     const url = `${this.itemsUrl}/${id}`;
   
     return this.http.delete<Item>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted Item id=${id}`)),
+      tap(_ => this.log(`deleted item id=${id}`)),
       catchError(this.handleError<Item>('deleteItem'))
     );
   }
@@ -82,6 +82,7 @@ export class ItemService {
       // if not search term, return empty Item array.
       return of([]);
     }
+
     return this.http.get<Item[]>(`${this.itemsUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
          this.log(`found Itemes matching "${term}"`) :

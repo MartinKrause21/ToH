@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 18, name: 'Dr IQ', money: 300, },
       { id: 19, name: 'Magma', money: 200, },
       { id: 20, name: 'Tornado', money: 100, },
-      { id: 20, name: 'Arnold', money: 10000, },
+      { id: 21, name: 'Arnold', money: 10000, },
     ];
 
     const items = [
@@ -28,6 +28,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'AXE', price: 2000, },
       { id: 14, name: 'Sword', price: 1000, },
       { id: 15, name: 'Tazer', price: 400, },
+      { id: 16, name: 'Pole', price: 2500, },
     ];
     return {heroes, items};
   }
