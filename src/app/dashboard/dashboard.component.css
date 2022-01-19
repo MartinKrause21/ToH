@@ -1,8 +1,19 @@
 /* DashboardComponent's private CSS styles */
 
 h2 {
-    text-align: center;
-  }
+  background-color: #1976d2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0 40px;
+  margin-top: 10px;
+}
+
   
   .heroes-menu {
     padding: 0;

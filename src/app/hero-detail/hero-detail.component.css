@@ -68,3 +68,7 @@ button {
 button:hover {
     background-color: #12487e;
 }
+
+button #free {
+    background-color: aqua;
+}

@@ -1,13 +1,32 @@
 #search-box {
     background-color: #cee5fc;
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     border: none;
-    width: auto;
-    min-width: 30%;
+    width: 100%;
     text-align: center;
     border-radius: 4px;
-    padding: 0 40px;
+    padding: 4px;
 }
+
+.search-result li {
+    list-style-type: circle;
+}
+
+.search-result li a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-result li a:hover {
+    background-color: #5396d8;
+}
+ 
 

@@ -22,11 +22,11 @@
     </ul>
 
   </div>
+  
+  <button mat-flat-button color="primary" (click)="goBack()">Go Back</button>
+  <button mat-flat-button color="primary" (click)="save()">save</button>
 
-  <button (click)="goBack()">Go Back</button>
-  <button (click)="save()">save</button>
-
-  <a routerLink="/freeitems/{{hero.id}}"> <button class="free"> Free Items </button></a>
+  <a routerLink="/freeitems/{{hero.id}}"> <button mat-flat-button color="primary" class="free"> Free Items </button></a>
 
 </div>
 

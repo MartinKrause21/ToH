@@ -51,14 +51,14 @@
 
 <h1>{{title}}</h1>
 
-  <nav>
-    <a routerLink="/dashboard">Dashboard </a>
-    <a routerLink="/heroes">Heroes</a>
-    <a routerLink="/items">Items</a>
-  </nav>
+<nav>
+  <a mat-flat-button color="primary" routerLink="/dashboard">Dashboard</a>
+  <a mat-flat-button color="primary" routerLink="/heroes">Heroes</a>
+  <a mat-flat-button color="primary" routerLink="/items">Items</a>
+</nav>   
 
-  
 <router-outlet></router-outlet>
+
 <app-messages></app-messages>
   
 

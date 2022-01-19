@@ -7,22 +7,24 @@
 </select>
 
 <div>
-  <label for="new-hero">Item name: </label>
-  <input id="new-hero" #heroName />
+  <label for="new-item">Item name: </label>
+  <input id="new-item" #itemName />
 
-  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
-    Add item
-  </button>
+  <button mat-flat-button color="primary" class="add-item" (click)="add(itemName.value); itemName.value=''">Add item</button>
+
 </div>
 
 <ul class="items">
+
   <li *ngFor="let item of items"
 
     [class.selected]="item === selectedItem" (click)="onSelect(item)">
-    <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}}
 
-    <button class="delete" title="delete item"
-    (click)="delete(item)">x</button>
+    <a>  <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}}  </a>
+
+    <button  class="delete-item-button" title="delete item" (click)="delete(item);" mat-mini-fab color="primary" aria-label="delete icon">
+      <mat-icon >delete</mat-icon>
+    </button>
 
   </li>
 </ul>
