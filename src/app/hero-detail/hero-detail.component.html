@@ -23,10 +23,14 @@
 
   </div>
   
-  <button mat-flat-button color="primary" (click)="goBack()">Go Back</button>
-  <button mat-flat-button color="primary" (click)="save()">save</button>
+  <button class="hero-dtl-btn" mat-flat-button color="primary" (click)="goBack()">Go Back</button>
+  <button class="hero-dtl-btn" mat-flat-button color="primary" (click)="save()">Save</button>
 
-  <a routerLink="/freeitems/{{hero.id}}"> <button mat-flat-button color="primary" class="free"> Free Items </button></a>
+  <a routerLink="/freeitems/{{hero.id}}"> 
+    
+    <button mat-flat-button color="primary" class="hero-dtl-btn"> Free Items </button> 
+  
+  </a>
 
 </div>
 

@@ -131,4 +131,5 @@ button.add-item {
     text-align: center;
     border-radius: 4px;
     padding: 0 40px;
+    margin-left: 4px;
 }
