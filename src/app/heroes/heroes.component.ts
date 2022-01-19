@@ -48,13 +48,13 @@ export class HeroesComponent implements OnInit {
     this.option = event.target.value;
 
 
-    if (this.option == "sort by id") {
+    if (this.option == "Sort by Id") {
       return this.heroes.sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
     }
-    else if (this.option == "sort by name") {
+    else if (this.option == "Sort by Name") {
       return this.heroes.sort((a, b) => a.name.localeCompare(b.name));
     }
-    else if (this.option == "sort by money") {
+    else if (this.option == "Sort by Money") {
       return this.heroes.sort((a, b) => a.money > b.money ? -1 : a.money < b.money ? 1 : 0);
     }
 

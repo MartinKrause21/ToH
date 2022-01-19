@@ -1,16 +1,23 @@
 <h2>My heroes</h2>
 
 <select (change)="dropDownChanged($event)" >
-  <option>sort by id</option>
-  <option>sort by name</option>
-  <option>sort by money</option>
+  <option>Sort by Id</option>
+  <option>Sort by Name</option>
+  <option>Sort by Money</option>
 </select>
 
 <div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
 
-  <button mat-flat-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">Add hero</button>
+  <form> 
+    <mat-form-field class="search-box" appearance="fill">
+      <mat-label>Hero name:</mat-label>
+      <input matInput id="new-hero" #heroName>
+    </mat-form-field>
+  </form>
+  
+  <button mat-flat-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">Add
+    <mat-icon>add_circle</mat-icon>
+  </button>
 
 </div>
 
@@ -22,14 +29,13 @@
           <span class="badge">{{hero.id}}</span> {{hero.name}} 
         </a>
 
-        <button  class="delete-button" title="delete hero" (click)="delete(hero);" mat-mini-fab color="primary" aria-label="delete icon">
-          <mat-icon >delete</mat-icon>
-        </button>
+      <button  class="delete-button" title="delete hero" (click)="delete(hero);" mat-mini-fab color="primary" aria-label="delete icon">
+         <mat-icon >delete</mat-icon>
+      </button>
 
-      </li>
+    </li>
 
 </ul>
-
 
 
 

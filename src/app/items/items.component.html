@@ -10,10 +10,17 @@
 <app-item-search></app-item-search>
 
 <div>
-  <label for="new-item">Item name: </label>
-  <input id="new-item" #itemName />
+  
+  <form> 
+    <mat-form-field class="search-box" appearance="fill">
+      <mat-label>Item name:</mat-label>
+      <input matInput id="new-item" #itemName>
+    </mat-form-field>
+  </form>
 
-  <button mat-flat-button color="primary" class="add-item" (click)="add(itemName.value); itemName.value=''">Add item</button>
+  <button mat-flat-button color="primary" class="add-item" (click)="add(itemName.value); itemName.value=''">Add 
+    <mat-icon>add_circle</mat-icon>
+  </button>
 
 </div>
 
