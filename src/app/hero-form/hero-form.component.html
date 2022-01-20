@@ -21,7 +21,7 @@
 
             <label for="name">Money</label>
   
-            <input type="number" class="form-control" id="money" required [(ngModel)]="model.name" name="money" #name="ngModel">
+            <input type="number" class="form-control" id="money" required [(ngModel)]="model.money" name="money" #name="ngModel">
                    
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Money is required </div>
   
@@ -31,7 +31,7 @@
 
             <label for="name">Life</label>
   
-            <input type="number" class="form-control" id="life" required [(ngModel)]="model.name" name="name" #name="ngModel">
+            <input type="number" class="form-control" id="life" required [(ngModel)]="model.life" name="life" #name="ngModel">
                    
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Life is required </div>
   
@@ -41,7 +41,7 @@
 
             <label for="name">Strength</label>
   
-            <input type="number" class="form-control" id="strength" required [(ngModel)]="model.name" name="name" #name="ngModel">
+            <input type="number" class="form-control" id="strength" required [(ngModel)]="model.strength" name="strength" #name="ngModel">
                    
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Strength is required </div>
   

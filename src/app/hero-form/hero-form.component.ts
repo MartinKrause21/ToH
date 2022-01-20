@@ -11,7 +11,7 @@ import { Hero } from '../hero';
 })
 export class HeroFormComponent {
 
-  heroes: Hero[] = [];
+  heroes: formHero[] = [];
 
   constructor(
     private location: Location,
@@ -19,22 +19,14 @@ export class HeroFormComponent {
   ) {}
   
 
-  model = new formHero(18, '', '', '',);
+  model = new formHero(18, '' ,'' , '', '');
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newHero() {
-    this.model = new formHero(42, '', '');
-  }
-
-  skyDog(): formHero {
-    const myHero =  new formHero(42, 'SkyDog',
-                           'Fetch any object at any distance',
-                           'Leslie Rollover');
-    console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"
-    return myHero;
+    this.model = new formHero(42 ,'','','', '');
   }
 
   goBack(): void {

@@ -16,9 +16,10 @@ export interface Hero {
 
     constructor(
       public id: number,
+      public money:string,
       public name: string,
-      public power: string,
-      public alterEgo?: string
+      public life: string,
+      public strength: string,
     ) {  }
   
   }
