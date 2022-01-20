@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { formHero } from '../hero';
+import { Location } from '@angular/common';
+import { HeroService } from '../hero.service';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-hero-form',
@@ -8,10 +11,15 @@ import { formHero } from '../hero';
 })
 export class HeroFormComponent {
 
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+  heroes: Hero[] = [];
 
-  model = new formHero(18, '', this.powers[0], '');
+  constructor(
+    private location: Location,
+    private heroService: HeroService,
+  ) {}
+  
+
+  model = new formHero(18, '', '', '',);
 
   submitted = false;
 
@@ -29,5 +37,8 @@ export class HeroFormComponent {
     return myHero;
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 
 }

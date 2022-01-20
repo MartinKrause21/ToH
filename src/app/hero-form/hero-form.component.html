@@ -1,46 +1,62 @@
 <div class="container">
+
     <div [hidden]="submitted">
 
       <h1>Hero Form</h1>
 
       <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
+
         <div class="form-group">
 
           <label for="name">Name</label>
 
-          <input type="text" class="form-control" id="name"
-                 required
-                 [(ngModel)]="model.name" name="name"
-                 #name="ngModel">
+          <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
                  
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required </div>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required </div>
 
         </div>
+
+        <div class="form-group">
+
+            <label for="name">Money</label>
   
-        <div class="form-group">
-
-          <label for="alterEgo">Alter Ego</label>
-
-          <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+            <input type="number" class="form-control" id="money" required [(ngModel)]="model.name" name="money" #name="ngModel">
+                   
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Money is required </div>
+  
         </div>
 
         <div class="form-group">
 
-          <label for="power">Hero Power</label>
-
-          <select class="form-control" id="power" required [(ngModel)]="model.power" name="power" #power="ngModel">
-            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-
-          </select>
-
-          <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
-            Power is required
-          </div>
-
+            <label for="name">Life</label>
+  
+            <input type="number" class="form-control" id="life" required [(ngModel)]="model.name" name="name" #name="ngModel">
+                   
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Life is required </div>
+  
         </div>
 
-        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        <div class="form-group">
+
+            <label for="name">Strength</label>
+  
+            <input type="number" class="form-control" id="strength" required [(ngModel)]="model.name" name="name" #name="ngModel">
+                   
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Strength is required </div>
+  
+        </div>
+
+          
+        <a> 
+
+            <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+            <button class="form-back" mat-flat-button color="primary" (click)="goBack()">Go Back</button>
+
+        </a>
+
      </form>
+     
     </div>
+
 </div>
