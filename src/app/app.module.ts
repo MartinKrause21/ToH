@@ -26,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {MatIconModule} from '@angular/material/icon';
     FreeItemsComponent,
     HeroSearchComponent,
     ItemSearchComponent,
+    HeroFormComponent,
   ],
 
   imports: [

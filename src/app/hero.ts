@@ -11,3 +11,14 @@ export interface Hero {
     items: Item [];
     freeItems : Item [];
   }
+
+  export class formHero {
+
+    constructor(
+      public id: number,
+      public name: string,
+      public power: string,
+      public alterEgo?: string
+    ) {  }
+  
+  }
