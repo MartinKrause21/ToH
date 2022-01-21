@@ -32,3 +32,44 @@ div.container {
     padding: 5px;
     margin: 5px;
 }
+h1 {
+  text-align: center;
+  background-color: #1976d2bd ;
+  border-radius: 4px;
+  margin-top: -5px;
+  margin-left: -5px;
+  margin-right: -5px;
+  color: white;
+}
+
+button.edit {
+  background-color: #42A948;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border: none;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  float: right;
+  padding: 1px;
+  margin-top: -5px;
+  float: right;
+  display: block;
+}
+
+button.hidden-form-back {
+  background-color: #1976d2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border: none;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  float: left;
+  padding: 1px;
+  margin-top: -5px;
+  float: left;
+  display: block;
+}

@@ -13,24 +13,27 @@ export class HeroFormComponent {
 
   heroes: formHero[] = [];
 
+  id!: number;
+  name!: string;
+  money!: number;
+  life!: number;
+  strength!: number;
+
   constructor(
     private location: Location,
     private heroService: HeroService,
   ) {}
   
 
-  model = new formHero(18, '' ,'' , '', '');
+  model = new formHero(this.id, this.name, this.money, this.life, this.strength);
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
-
-  newHero() {
-    this.model = new formHero(42 ,'','','', '');
-  }
+  onSubmit() { this.submitted = true; console.log(this.model); return}
 
   goBack(): void {
     this.location.back();
   }
+
 
 }

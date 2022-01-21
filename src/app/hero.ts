@@ -16,10 +16,10 @@ export interface Hero {
 
     constructor(
       public id: number,
-      public money:string,
       public name: string,
-      public life: string,
-      public strength: string,
+      public money:number,
+      public life: number,
+      public strength: number,
     ) {  }
   
   }
