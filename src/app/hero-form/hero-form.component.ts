@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { formHero } from '../hero';
 import { Location } from '@angular/common';
 import { HeroService } from '../hero.service';
@@ -46,4 +46,9 @@ export class HeroFormComponent {
   goBack(): void {
     this.location.back();
   }
+  
+  @Input()
+  maxlength!: number;
+
+  
 }

@@ -11,9 +11,13 @@
 
           <label for="name">Name</label>
 
-          <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+          <input type="text" ngModel maxlength="20"  required minlength="4" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
                  
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required </div>
+
+          <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 4 characters long.
+          </div>
 
         </div>
 
@@ -21,7 +25,7 @@
 
             <label for="name">Money</label>
   
-            <input type="number" class="form-control" id="money" required [(ngModel)]="model.money" name="money" #name="ngModel">
+            <input type="number"  class="form-control" id="money" required [(ngModel)]="model.money" name="money" #name="ngModel">
                    
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Money is required </div>
   
