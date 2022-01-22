@@ -3,6 +3,8 @@ import { formHero } from '../hero';
 import { Location } from '@angular/common';
 import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
+import { Observable } from 'rxjs';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-hero-form',
@@ -12,6 +14,7 @@ import { Hero } from '../hero';
 export class HeroFormComponent {
 
   heroes: formHero[] = [];
+  hero: Hero[]=[];
 
   id!: number;
   name!: string;
@@ -29,11 +32,18 @@ export class HeroFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; console.log(this.model); return}
+  onSubmit() { 
+    
+      this.submitted = true;
+
+      console.log(this.model);
+
+      this.heroService.addHero( this.model as Hero)
+      .subscribe(hero => {this.heroes.push(hero); }); 
+      
+  }
 
   goBack(): void {
     this.location.back();
   }
-
-
 }
