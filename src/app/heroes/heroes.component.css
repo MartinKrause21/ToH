@@ -74,20 +74,6 @@ div {
     padding: 6px;
 }
 
-button.add-button {
-    background-color: #1976d2;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    border: none;
-    text-align: center;
-    border-radius: 4px;
-    padding: 3px;
-    margin-left: 8px;
-    display: block;
-    height: 53px;
-    width: 80px;
-}
 
 button.delete-button {
     background-color: rgb(250, 90, 90);
@@ -113,4 +99,18 @@ form {
 select {
     width: 100%;
     border-radius: 3px;
+}
+
+button.create-hero {
+    background-color: #1976d2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px;
+    height: 53px;
+    width: 350px;
+    margin-bottom: 5px;
 }

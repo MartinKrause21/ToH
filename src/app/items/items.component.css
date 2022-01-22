@@ -46,6 +46,7 @@ input {
     border-radius: 4px;
     border: 1px solid rgb(241, 235, 235);
     background-color: #fffbfbe0;
+    width: auto ;
 }
 
 div {
@@ -139,3 +140,18 @@ select {
     width: 100%;
     border-radius: 3px;
 }
+
+button.create-item {
+    background-color: #1976d2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px;
+    height: 53px;
+    width: 350px;
+    margin-bottom: 10px;
+}
+

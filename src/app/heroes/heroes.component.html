@@ -8,24 +8,16 @@
 
 <div>
 
-  <form> 
-    <mat-form-field class="search-box" appearance="fill">
-      <mat-label>Hero name:</mat-label>
-      <input matInput id="new-hero" #heroName>
-    </mat-form-field>
-  </form>
+  <a routerLink="/app-hero-form"> 
+    
+    <button mat-flat-button color="primary" class="create-hero">  Create hero 
+      <mat-icon>add_circle</mat-icon>
+    </button> 
   
-  <button mat-flat-button color="primary" class="add-button" (click)="add(heroName.value); heroName.value=''">Add
-    <mat-icon>add_circle</mat-icon>
-  </button>
+  </a>
 
 </div>
 
-<a routerLink="/app-hero-form"> 
-    
-  <button mat-flat-button color="primary" class="hero-dtl-btn"> Create hero </button> 
-
-</a>
 
 <ul class = "heroes">
 

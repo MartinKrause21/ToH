@@ -1,0 +1,75 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+
+button.form-back {
+    background-color: #1976d2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: none;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+    float: right;
+    padding: 1px;
+    margin-top: -5px;
+}
+
+button.btn btn-success {
+    float: left;
+}
+
+div.container {
+    align-content: center;
+    background-color: rgb(235, 235, 235);
+    width: 550px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+h1 {
+  text-align: center;
+  background-color: #1976d2bd ;
+  border-radius: 4px;
+  margin-top: -5px;
+  margin-left: -5px;
+  margin-right: -5px;
+  color: white;
+}
+
+button.edit {
+  background-color: #42A948;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border: none;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  float: right;
+  padding: 1px;
+  margin-top: -5px;
+  float: right;
+  display: block;
+}
+
+button.hidden-form-back {
+  background-color: #1976d2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border: none;
+  width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  float: left;
+  padding: 1px;
+  margin-top: -5px;
+  float: left;
+  display: block;
+}
