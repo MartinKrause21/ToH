@@ -22,12 +22,12 @@ export class HeroFormComponent {
   life!: number;
   strength!: number;
 
+
   constructor(
     private location: Location,
     private heroService: HeroService,
-  ) {}
+  ) {  }
   
-
   model = new formHero(this.id, this.name, this.money, this.life, this.strength);
 
   submitted = false;
@@ -47,8 +47,7 @@ export class HeroFormComponent {
     this.location.back();
   }
   
-  @Input()
-  maxlength!: number;
-
-  
+ 
+    
+ 
 }

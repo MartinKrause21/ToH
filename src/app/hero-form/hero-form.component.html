@@ -4,14 +4,14 @@
 
       <h1>Hero Form</h1>
 
-      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm" >
 
 
         <div class="form-group">
 
           <label for="name">Name</label>
 
-          <input type="text" ngModel maxlength="20"  required minlength="4" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+          <input type="text" ngModel required maxlength="20"  minlength="4" class="form-control" id="name" [(ngModel)]="model.name" name="name" #name="ngModel">
                  
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required </div>
 
@@ -23,31 +23,49 @@
 
         <div class="form-group">
 
-            <label for="name">Money</label>
+            <label for="money" >Money</label>
   
-            <input type="number"  class="form-control" id="money" required [(ngModel)]="model.money" name="money" #name="ngModel">
+            <input type="number"   class="form-control" id="money" required [(ngModel)]="model.money" name="money" #money="ngModel">
                    
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Money is required </div>
+            <div [hidden]="money.valid || money.pristine" class="alert alert-danger">Money is required </div>
+
   
         </div>
 
         <div class="form-group">
 
-            <label for="name">Life</label>
+            <label for="life">Life</label>
   
-            <input type="number" class="form-control" id="life" required [(ngModel)]="model.life" name="life" #name="ngModel">
+            <input type="number" min="1" max="10" class="form-control" id="life" required [(ngModel)]="model.life" name="life" #life="ngModel">
                    
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Life is required </div>
+            <div [hidden]="life.valid || life.pristine" class="alert alert-danger">Life range is 1-10</div>
+
+            <div *ngIf="life.errors?.min">
+              Must be number from range 1-10.
+            </div>
+
+            <div *ngIf="life.errors?.max">
+              Must be number from range 1-10.
+            </div>
   
         </div>
 
         <div class="form-group">
 
-            <label for="name">Strength</label>
+            <label for="strength">Strength</label>
   
-            <input type="number" class="form-control" id="strength" required [(ngModel)]="model.strength" name="strength" #name="ngModel">
+            <input type="number" min="1" max="10" class="form-control" id="strength" required [(ngModel)]="model.strength" name="strength" #strength="ngModel">
                    
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Strength is required </div>
+            <div [hidden]="strength.valid || strength.pristine" class="alert alert-danger">Strength range is 1-10</div>
+
+            <div *ngIf="strength.errors?.min">
+              Must be number from range 1-10.
+            </div>
+
+            <div *ngIf="strength.errors?.max">
+              Must be number from range 1-10.
+            </div>
+
   
         </div>
 
