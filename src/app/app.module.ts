@@ -29,6 +29,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { ItemFormComponent } from './item-form/item-form.component';
     ItemSearchComponent,
     HeroFormComponent,
     ItemFormComponent,
+    LoginComponent,
   ],
 
   imports: [

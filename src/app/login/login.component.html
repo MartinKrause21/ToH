@@ -1,0 +1,40 @@
+
+  <div class="container">
+
+    <div>
+
+      <h1>Login</h1>
+
+      <form>
+
+
+        <div class="form-group">
+
+          <label for="username">Username</label>
+
+          <input type="text" class="form-control" id="username" required [(ngModel)]="username" name="username" >
+ 
+        </div>
+
+        <div class="form-group">
+
+            <label for="password">Password</label>
+  
+            <input type="text" class="form-control" id="password" required [(ngModel)]="password" name="password" >
+                   
+        </div>
+
+          
+        <a> 
+
+            <button class="login" mat-flat-button color="primary" (click)="login()">Login</button>
+
+            <button class="back" mat-flat-button color="primary" (click)="goBack()">Go Back</button>
+
+        </a>
+
+     </form>
+     
+    </div>
+
+</div>
