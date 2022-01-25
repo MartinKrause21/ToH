@@ -12,7 +12,8 @@
 
           <label for="username">Username</label>
 
-          <input type="text" class="form-control" id="username" required [(ngModel)]="username" name="username" >
+          <input type="text" required pattern="user" class="form-control" id="username" required [(ngModel)]="username"  name="username" >
+           
  
         </div>
 
@@ -20,7 +21,7 @@
 
             <label for="password">Password</label>
   
-            <input type="text" class="form-control" id="password" required [(ngModel)]="password" name="password" >
+            <input type="text" required pattern="user" class="form-control" id="password" required [(ngModel)]="password" name="password" >
                    
         </div>
 

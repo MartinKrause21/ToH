@@ -30,6 +30,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginComponent } from './login/login.component';
     HeroFormComponent,
     ItemFormComponent,
     LoginComponent,
+    UserComponent,
   ],
 
   imports: [

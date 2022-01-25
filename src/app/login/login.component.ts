@@ -23,10 +23,18 @@ export class LoginComponent implements OnInit {
 
   login() : void {
     if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["user"]);
-    }else {
+     this.router.navigate(["admin"]);
+    }
+    else {
       alert("Invalid credentials");
     }
+
+    if(this.username == 'user' && this.password == 'user'){
+      this.router.navigate(["user"]);
+     }
+     else {
+       alert("Invalid credentials");
+     }
   }
   
   goBack(): void {

@@ -33,21 +33,18 @@ export class HeroFormComponent {
   submitted = false;
 
   onSubmit() { 
-    
-      this.submitted = true;
+
+      this.submitted = true
 
       console.log(this.model);
 
       this.heroService.addHero( this.model as Hero)
       .subscribe(hero => {this.heroes.push(hero); }); 
-      
+
   }
 
   goBack(): void {
     this.location.back();
   }
-  
- 
-    
- 
+
 }
