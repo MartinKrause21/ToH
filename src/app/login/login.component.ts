@@ -22,19 +22,21 @@ export class LoginComponent implements OnInit {
 
 
   login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["admin"]);
+    if (this.username == 'user' && this.password == 'user') {
+      
+     this.router.navigate(["user"]);
+
     }
+    else if (this.username == 'admin' && this.password == 'admin') { 
+      
+      this.router.navigate(["admin"]);
+    }
+
     else {
       alert("Invalid credentials");
     }
 
-    if(this.username == 'user' && this.password == 'user'){
-      this.router.navigate(["user"]);
-     }
-     else {
-       alert("Invalid credentials");
-     }
+
   }
   
   goBack(): void {

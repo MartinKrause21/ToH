@@ -31,6 +31,7 @@ import { ItemFormComponent } from './item-form/item-form.component';
 
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { UserComponent } from './user/user.component';
     ItemFormComponent,
     LoginComponent,
     UserComponent,
+    AdminComponent,
   ],
 
   imports: [
