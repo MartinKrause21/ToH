@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FItems } from '../mock-items';
 import { Item } from '../item';
 import { ItemService } from '../item.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-items',
@@ -12,15 +13,22 @@ export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
 
+  userLogin: boolean = true;
+
   selectedItem?: Item;
   onSelect(item: Item): void {
   this.selectedItem = item;
 }
 
-  constructor(private itemService: ItemService) { }
+
+  constructor(
+    private itemService: ItemService,
+    private dataService: DataService,
+    ) { }
   
   ngOnInit(){
     this.getItems();
+    this.userLogin = this.dataService.getStatus();
    }
 
    getItems(): void {

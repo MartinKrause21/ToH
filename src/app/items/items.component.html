@@ -9,7 +9,7 @@
 
 <app-item-search></app-item-search>
 
-<div>
+<div *ngIf="userLogin == true">
 
   <a routerLink="/app-item-form"> 
     
@@ -30,7 +30,7 @@
 
     <a>  <span class="badge">{{item.id}}</span> {{item.name}} | {{item.price}}  </a>
 
-    <button  class="delete-item-button" title="delete item" (click)="delete(item);" mat-mini-fab color="primary" aria-label="delete icon">
+    <button *ngIf="userLogin == true" class="delete-item-button" title="delete item" (click)="delete(item);" mat-mini-fab color="primary" aria-label="delete icon">
       <mat-icon >delete</mat-icon>
     </button>
 

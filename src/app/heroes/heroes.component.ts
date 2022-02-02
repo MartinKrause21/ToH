@@ -6,6 +6,7 @@ import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -17,10 +18,17 @@ import { map } from 'rxjs/operators';
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  userLogin: boolean = true;
+
+  constructor(
+    private heroService: HeroService,
+    private dataService: DataService,
+    ) { }
+
 
   ngOnInit() {
     this.getHeroes();
+    this.userLogin = this.dataService.getStatus();
   }
 
   getHeroes(): void {

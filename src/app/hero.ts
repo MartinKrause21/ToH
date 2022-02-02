@@ -24,3 +24,12 @@ export interface Hero {
     ) {  }
   
   }
+
+  export class loggedUser {
+
+    constructor(
+      public username: string,
+      public password: string,
+    ) {  }
+  
+  }

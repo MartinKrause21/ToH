@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { Location } from '@angular/common';
+import { DataService } from '../data.service';
+import { loggedUser } from '../hero';
 
 @Component({
   selector: 'app-login',
@@ -12,30 +14,47 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private location: Location,
+    private dataService: DataService,
     ) { }
+
+  user : loggedUser[]= [];
+
+
+  userLogin!: boolean;
 
   username!: string;
   password!: string;
 
   ngOnInit(): void {
+    this.dataService.setStatus(this.userLogin);
   }
+
+  model = new loggedUser( this.username, this.password);
 
 
   login() : void {
-    if (this.username == 'user' && this.password == 'user') {
+    if (this.model.username == 'user' && this.model.password == 'user') {
       
-     this.router.navigate(["user"]);
+      this.dataService.setStatus(this.userLogin = false);
+
+      console.log(this.model);
+
+      this.router.navigate(["dashboard"]); 
 
     }
-    else if (this.username == 'admin' && this.password == 'admin') { 
+    else if (this.model.username == 'admin' && this.model.password == 'admin') { 
       
-      this.router.navigate(["admin"]);
+      this.dataService.setStatus(this.userLogin = true);
+
+      console.log(this.model);
+
+      this.router.navigate(["dashboard"]); 
+
     }
 
     else {
       alert("Invalid credentials");
     }
-
 
   }
   
@@ -43,4 +62,5 @@ export class LoginComponent implements OnInit {
     this.location.back();
   }
 
+ 
 }
